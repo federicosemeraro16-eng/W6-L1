@@ -114,50 +114,7 @@
 
           <div class="row" id="card-container">
 
-            <!-- <article class="col-12 col-sm-6 col-xl-4 mb-3">
-
-              <div class="card">
-                <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
-                  class="card-img-top img-size img-fluid" alt="placeholder image">
-                <div class="card-body">
-                  <h5 class="card-title">Sneaker Run</h5>
-                  <p class="card-text">Scarpa leggera per la corsa, suola in gomma traspirante</p>
-                  <strong>€ 89,00</strong>
-                  <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal"
-                    data-bs-target="#sneaker-modal">Dettagli</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 mb-3">
-
-              <div class="card">
-                <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
-                  class="card-img-top img-size img-fluid" alt="placeholder image">
-                <div class="card-body">
-                  <h5 class="card-title">T-shirt basic</h5>
-                  <p class="card-text">Cotone biologico, taglio regolare, disponibile in 5 colori.</p>
-                  <strong>€ 19,00</strong>
-                  <button class="btn btn-primary w-100 mt-2" data-bs-target="#t-shirt-modal"
-                    data-bs-toggle="modal">Dettagli</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 mb-3">
-              <div class="card">
-                <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
-                  class="card-img-top img-fluid" alt="placeholder image">
-                <div class="card-body">
-                  <h5 class="card-title">Borsa city</h5>
-                  <p class="card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
-                  <strong>€ 49,00</strong>
-                  <button class="btn btn-primary w-100 mt-2" data-bs-target="#borsa-city-modal"
-                    data-bs-toggle="modal">Dettagli</button>
-                </div>
-              </div>
-            </article> -->
-
+            
           </div>
         </section>
       </div>
@@ -171,20 +128,20 @@
 
   </footer>
 
-  <!-- modale per sneakers -->
-  <div class="modal fade" id="sneaker-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <!-- modale per -->
+  <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Sneaker Run</h1>
+          <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel"></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
             class="card-img-top img-size img-fluid img-modal-size" alt="placeholder image" />
-          <p class="card-text mt-2">Scarpa leggera per la corsa, suola in gomma traspirante</p>
-          <strong>€ 89,00</strong>
+          <p class="card-text mt-2" id="productDescriptionPar"></p>
+          <strong id="productPrice"></strong>
 
 
         </div>
@@ -195,58 +152,6 @@
       </div>
     </div>
   </div>
-
-  <!-- modale per t-shirt -->
-
-  <div class="modal fade" id="t-shirt-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">T-shirt basic</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
-            class="card-img-top img-size img-fluid img-modal-size" alt="placeholder image" />
-          <p class="card-text">Cotone biologico, taglio regolare, disponibile in 5 colori.</p>
-          <strong>€ 19,00</strong>
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary bg-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- modale per borsa city -->
-
-  <div class="modal fade" id="borsa-city-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">T-shirt basic</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png"
-            class="card-img-top img-size img-fluid img-modal-size" alt="placeholder image" />
-          <p class="card-text">Tessuto resistente, tasca interna, cinghia regolabile.</p>
-          <strong>€ 49,00</strong>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary bg-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
 
