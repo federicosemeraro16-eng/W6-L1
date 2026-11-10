@@ -36,7 +36,7 @@ PRODUCTS.forEach((product) => {
   const newImg = document.createElement('img');
   const attributes = {
     src: 'https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png',
-    alt: 'placeholder-image',
+    alt: `${product.productName}`,
   }
 
   for (const attribute in attributes) {
@@ -59,7 +59,7 @@ PRODUCTS.forEach((product) => {
   newBtn.textContent = 'Dettagli';
   newBtn.classList.add('btn', 'btn-primary', 'w-100', 'mt-2');
   const btnAttr = {
-    'data-bs-target': `#modal`,
+    'data-bs-target': '#modal',
     'data-bs-toggle': 'modal',
 
   }
@@ -79,8 +79,8 @@ PRODUCTS.forEach((product) => {
   newArticle.appendChild(newDiv);
   cardContainer.appendChild(newArticle);
 
-  const btn = newDiv.querySelector('.btn');
-  btn.addEventListener('click', (e) => {
+  
+  newBtn.addEventListener('click', (e) => {
     e.preventDefault();
     staticBackdropLabel.textContent = product.productName;
     productPrice.textContent = product.price;
