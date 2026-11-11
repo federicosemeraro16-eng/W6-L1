@@ -1,9 +1,4 @@
-$brand-primary:#fff;
-$radius-base:8px;
-$shadow-card:0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-card-hover:0 12px 24px rgba(0, 0, 0, 0.2);
-$text:black;
-
+@use 'variables' as v;
 
 @mixin tema($bg,$testo,$card-bg,$bordo,$muted){
   background-color: $bg;
@@ -35,15 +30,20 @@ body{
   @include tema(#fafafa,#1a1a1a,#ffffff,#e0e0e0,#6c757d);
   transition: background-color 200ms ease,color 200ms ease;
 
+
   &.dark{
-      @include tema(#121212,#e0e0e0,#1e1e1e,#333333,#a0a0a0)
+      @include tema(#121212,#e0e0e0,#1e1e1e,#333333,#a0a0a0);
+      
+       header {
+         background-color: v.$brand-primary-dark !important;
+      }
     }
 
   .card{
-    border-radius: $radius-base;
-    box-shadow: $shadow-card;
+    border-radius: v.$radius-base;
+    box-shadow: v.$shadow-card;
     &:hover{
-      box-shadow: $shadow-card-hover;
+      box-shadow: v.$shadow-card-hover;
       transform: translate(-3px) ;
     }
     
