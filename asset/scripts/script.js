@@ -2,6 +2,8 @@ const cardContainer = document.querySelector('#card-container');
 const staticBackdropLabel = document.querySelector('#staticBackdropLabel');
 const productPrice = document.querySelector('#productPrice');
 const productDescriptionPar = document.querySelector('#productDescriptionPar');
+const themeBtn = document.querySelector('#toggle-tema');
+const body = document.querySelector('body');
 
 
 const PRODUCTS = [
@@ -89,4 +91,12 @@ PRODUCTS.forEach((product) => {
   })
 
 
+})
+
+// funzione per cambio tema//
+
+themeBtn.addEventListener('click',(e) => {
+  e.preventDefault();
+  body.classList.toggle('dark');
+  themeBtn.textContent = document.body.classList.contains('dark') ? 'Tema Chiaro' : 'Tema Scuro';
 })
