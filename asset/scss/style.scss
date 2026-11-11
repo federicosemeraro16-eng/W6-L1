@@ -46,10 +46,7 @@ body{
        header {
          background-color: v.$brand-primary-dark !important;
       }
-       .card-body h5{
-    
-        color: v.$brand-primary;
-      }
+      .card-body h5,
       .card-body strong{
         color: v.$brand-primary;
       }
@@ -59,10 +56,11 @@ body{
   .card{
     border-radius: v.$radius-base;
     box-shadow: v.$shadow-card;
+    transition: box-shadow 200ms ease,transform 200ms ease;
   
     &:hover{
       box-shadow: v.$shadow-card-hover;
-      transform: translate(-3px) ;
+      transform: translateY(-3px) ;
     }
      @include tablet-Query{
       padding: 24px;
@@ -72,7 +70,7 @@ body{
     
     .card-title{
       font-weight: bold;
-      transition: box-shadow 200ms ease,transform 200ms ease;
+      
     }
   }
   
