@@ -50,6 +50,12 @@ body.dark .modal-content {
 body.dark header {
   background-color: rgb(85%, 85%, 85%) !important;
 }
+body.dark .card-body h5 {
+  color: #fff;
+}
+body.dark .card-body strong {
+  color: #fff;
+}
 body .card {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

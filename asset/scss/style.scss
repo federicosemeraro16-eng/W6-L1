@@ -46,6 +46,14 @@ body{
        header {
          background-color: v.$brand-primary-dark !important;
       }
+       .card-body h5{
+    
+        color: v.$brand-primary;
+      }
+      .card-body strong{
+        color: v.$brand-primary;
+      }
+    
     }
 
   .card{
@@ -59,6 +67,7 @@ body{
      @include tablet-Query{
       padding: 24px;
     }
+
 
     
     .card-title{
