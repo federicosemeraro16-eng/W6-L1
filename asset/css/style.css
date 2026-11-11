@@ -58,6 +58,11 @@ body .card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   transform: translate(-3px);
 }
+@media screen and (min-width: 768px) {
+  body .card {
+    padding: 24px;
+  }
+}
 body .card .card-title {
   font-weight: bold;
   transition: box-shadow 200ms ease, transform 200ms ease;

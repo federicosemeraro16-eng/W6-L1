@@ -26,6 +26,15 @@
   
 }
 
+// mixin media query
+
+@mixin tablet-Query{
+  @media screen and (min-width:768px) {
+    @content
+    
+  }
+}
+
 body{
   @include tema(#fafafa,#1a1a1a,#ffffff,#e0e0e0,#6c757d);
   transition: background-color 200ms ease,color 200ms ease;
@@ -42,10 +51,15 @@ body{
   .card{
     border-radius: v.$radius-base;
     box-shadow: v.$shadow-card;
+  
     &:hover{
       box-shadow: v.$shadow-card-hover;
       transform: translate(-3px) ;
     }
+     @include tablet-Query{
+      padding: 24px;
+    }
+
     
     .card-title{
       font-weight: bold;
