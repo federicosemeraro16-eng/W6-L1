@@ -35,6 +35,10 @@ body{
   @include tema(#fafafa,#1a1a1a,#ffffff,#e0e0e0,#6c757d);
   transition: background-color 200ms ease,color 200ms ease;
 
+  &.dark{
+      @include tema(#121212,#e0e0e0,#1e1e1e,#333333,#a0a0a0)
+    }
+
   .card{
     border-radius: $radius-base;
     box-shadow: $shadow-card;
@@ -42,6 +46,7 @@ body{
       box-shadow: $shadow-card-hover;
       transform: translate(-3px) ;
     }
+    
     .card-title{
       font-weight: bold;
       transition: box-shadow 200ms ease,transform 200ms ease;

@@ -24,6 +24,29 @@ body .modal-content {
 body {
   transition: background-color 200ms ease, color 200ms ease;
 }
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark .card {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+body.dark .card .card-text {
+  color: #a0a0a0;
+}
+body.dark .card .card-footer {
+  background-color: #1e1e1e;
+}
+body.dark aside .bg-light {
+  background-color: #1e1e1e !important;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+body.dark .modal-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
 body .card {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
