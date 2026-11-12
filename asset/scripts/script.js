@@ -147,8 +147,11 @@ renderProducts(PRODUCTS);
 //listener per filtraggio
 
 FILTERS_CONTAINER.addEventListener('click', (e) => {
-  console.log(e.target.dataset.category)
+  e.preventDefault();
   let categoryChoosed = e.target.dataset.category;
+  if(!categoryChoosed){
+    return
+  }
   renderProducts(filterItems(PRODUCTS, categoryChoosed));
 })
 
