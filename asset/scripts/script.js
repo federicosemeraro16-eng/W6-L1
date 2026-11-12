@@ -4,7 +4,8 @@ const productPrice = document.querySelector('#productPrice');
 const productDescriptionPar = document.querySelector('#productDescriptionPar');
 const themeBtn = document.querySelector('#toggle-tema');
 const body = document.querySelector('body');
-const FILTERS_CONTAINER = document.querySelector('#filters')
+const FILTERS_CONTAINER = document.querySelector('#filters');
+const ALL_BTN= document.querySelector('#all-btn');
 
 
 const PRODUCTS = [
@@ -78,8 +79,6 @@ function renderProducts(list) {
       newDiv.classList.add('abbigliamento');
     } else if (item.category === 'accessories') {
       newDiv.classList.add('accessori')
-
-
     }
 
     const newImg = document.createElement('img');
@@ -148,12 +147,22 @@ renderProducts(PRODUCTS);
 
 FILTERS_CONTAINER.addEventListener('click', (e) => {
   e.preventDefault();
-  
-  let categoryChoosed = e.target.dataset.category;
+  let btnClicked = e.target;
+  let categoryChoosed = btnClicked.dataset.category;
   if(!categoryChoosed){
     return
   }
-  renderProducts(filterItems(PRODUCTS, categoryChoosed));
+ 
+  const BUTTONS_LIST = document.querySelectorAll('#filters button');
+  BUTTONS_LIST.forEach((button) => button.classList.remove('active'));
+  btnClicked.classList.add('active');
+
+  if (categoryChoosed==='all'){
+    renderProducts(PRODUCTS)
+  }else{
+    renderProducts(filterItems(PRODUCTS, categoryChoosed));
+  }
+  
 })
 
 
