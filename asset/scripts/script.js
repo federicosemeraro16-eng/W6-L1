@@ -5,7 +5,7 @@ const productDescriptionPar = document.querySelector('#productDescriptionPar');
 const themeBtn = document.querySelector('#toggle-tema');
 const body = document.querySelector('body');
 const FILTERS_CONTAINER = document.querySelector('#filters');
-const ALL_BTN= document.querySelector('#all-btn');
+
 
 
 const PRODUCTS = [
