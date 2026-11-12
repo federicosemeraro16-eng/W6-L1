@@ -84,6 +84,33 @@ body .card {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 200ms ease, transform 200ms ease;
 }
+body .card.scarpe {
+  border-top: 4px solid hsl(220, 60%, 40%);
+}
+body .card.scarpe .card-title {
+  color: hsl(220, 60%, 40%);
+}
+body .card.scarpe:hover {
+  box-shadow: 0 6px 18px rgba(16%, 32%, 64%, 0.3);
+}
+body .card.abbigliamento {
+  border-top: 4px solid hsl(0, 70%, 50%);
+}
+body .card.abbigliamento .card-title {
+  color: hsl(0, 70%, 50%);
+}
+body .card.abbigliamento:hover {
+  box-shadow: 0 6px 18px rgba(85%, 15%, 15%, 0.3);
+}
+body .card.accessori {
+  border-top: 4px solid hsl(45, 90%, 50%);
+}
+body .card.accessori .card-title {
+  color: hsl(45, 90%, 50%);
+}
+body .card.accessori:hover {
+  box-shadow: 0 6px 18px rgba(95%, 72.5%, 5%, 0.3);
+}
 body .card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
@@ -95,36 +122,6 @@ body .card:hover {
 }
 body .card .card-title {
   font-weight: bold;
-}
-
-.card.scarpe {
-  border-top: 4px solid hsl(220, 60%, 40%);
-}
-.card.scarpe .card-title {
-  color: hsl(220, 60%, 40%);
-}
-.card.scarpe:hover {
-  box-shadow: 0 6px 18px rgba(16%, 32%, 64%, 0.3);
-}
-
-.card.abbigliamento {
-  border-top: 4px solid hsl(0, 70%, 50%);
-}
-.card.abbigliamento .card-title {
-  color: hsl(0, 70%, 50%);
-}
-.card.abbigliamento:hover {
-  box-shadow: 0 6px 18px rgba(85%, 15%, 15%, 0.3);
-}
-
-.card.accessori {
-  border-top: 4px solid hsl(45, 90%, 50%);
-}
-.card.accessori .card-title {
-  color: hsl(45, 90%, 50%);
-}
-.card.accessori:hover {
-  box-shadow: 0 6px 18px rgba(95%, 72.5%, 5%, 0.3);
 }
 
 .hero-height {

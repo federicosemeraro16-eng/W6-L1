@@ -31,6 +31,24 @@
 
 }
 
+@mixin card-prodotto($accent) {
+  border-top: 4px solid $accent;
+
+  .card-title {
+    color: $accent;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba($accent, 0.3);
+  }
+}
+
+@mixin tablet-Query {
+  @media screen and (min-width:768px) {
+    @content
+  }
+}
+
 // override classi bs
 
 .btn-primary,
@@ -48,8 +66,9 @@
 .btn-outline-primary {
   border-color: v.$brand-primary;
   color: v.$brand-primary;
+
   &:hover,
-  &.active{
+  &.active {
     border-color: v.$brand-primary !important;
     color: #ffffff !important;
     background-color: v.$brand-primary;
@@ -63,27 +82,13 @@
 }
 
 
-// mixin
 
-@mixin card-prodotto($accent){
-  border-top: 4px solid $accent;
-  .card-title{
-    color: $accent;
-  }
-  &:hover{
-    box-shadow: 0 6px 18px rgba($accent,0.3);
-  }
-}
-
-@mixin tablet-Query {
-  @media screen and (min-width:768px) {
-    @content
-  }
-}
 
 body {
   @include tema(#fafafa, #1a1a1a, #ffffff, #e0e0e0, #6c757d);
   transition: background-color 200ms ease, color 200ms ease;
+
+
 
 
   &.dark {
@@ -104,7 +109,19 @@ body {
     border-radius: v.$radius-base;
     box-shadow: v.$shadow-card;
     transition: box-shadow 200ms ease, transform 200ms ease;
-    
+
+    &.scarpe {
+      @include card-prodotto(hsl(220, 60%, 40%));
+    }
+
+    &.abbigliamento {
+      @include card-prodotto(hsl(0, 70%, 50%));
+    }
+
+    &.accessori {
+      @include card-prodotto(hsl(45, 90%, 50%));
+    }
+
 
     &:hover {
       box-shadow: v.$shadow-card-hover;
@@ -126,17 +143,6 @@ body {
 }
 
 
-.card.scarpe{
-  @include card-prodotto(hsl(220,60%,40%));
-}
-
-.card.abbigliamento{
-  @include card-prodotto(hsl(0,70%,50%));
-}
-
-.card.accessori{
-  @include card-prodotto(hsl(45,90%,50%));
-}
 
 
 //codice importato da css precedente e reinserito con scss//
