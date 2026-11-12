@@ -72,6 +72,16 @@ function renderProducts(list) {
     newArticle.classList.add('col-12', 'col-sm-6', 'col-xl-4', 'mb-3');
     const newDiv = document.createElement('div');
     newDiv.classList.add('card', 'h-100');
+    if (item.category === 'shoes') {
+      newDiv.classList.add('scarpe');
+    } else if (item.category === 'clothing') {
+      newDiv.classList.add('abbigliamento');
+    } else if (item.category === 'accessories') {
+      newDiv.classList.add('accessori')
+
+
+    }
+
     const newImg = document.createElement('img');
     const attributes = {
       src: `${item.img}`,
@@ -150,7 +160,7 @@ FILTERS_CONTAINER.addEventListener('click', (e) => {
 
 function filterItems(list, category) {
   return list.filter((item) => item.category === category);
-  
+
 
 }
 

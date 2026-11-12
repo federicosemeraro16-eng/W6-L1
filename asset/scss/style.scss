@@ -104,6 +104,7 @@ body {
     border-radius: v.$radius-base;
     box-shadow: v.$shadow-card;
     transition: box-shadow 200ms ease, transform 200ms ease;
+    
 
     &:hover {
       box-shadow: v.$shadow-card-hover;
