@@ -11,34 +11,64 @@ const PRODUCTS = [
     productName: 'Sneaker Run',
     price: '89,00 €',
     description: 'Scarpa leggera per la corsa,scuola in gomma traspirante.',
-    id: 'sneaker'
+    img: 'https://placehold.co/300x180',
+    id: '1'
 
   },
   {
     productName: 'T-shirt basic',
     price: '19,00 €',
     description: 'Cotone biologico, taglio regolare, disponibile in 5 colori.',
-    id: 't-shirt',
+    img: 'https://placehold.co/300x180',
+    id: '2',
 
   },
   {
     productName: 'Borsa city',
     price: '49,00 €',
     description: 'Tessuto resistente, tasca interna, cinghia regolabile.',
-    id: 'borsa-city',
+    img: 'https://placehold.co/300x180',
+    id: '3',
+
+  },
+  {
+    productName: 'Felpa',
+    price: '99,00 €',
+    description: 'Felpa in cotone felpato con cappuccio, tasca a marsupio e polsini a costine.',
+    img: 'https://placehold.co/300x180',
+    id: '4',
+
+  },
+  {
+    productName: 'Braccialetto',
+    price: '149,00 €',
+    description: 'Braccialetto in acciaio inossidabile, chiusura regolabile, resistente all\'acqua.',
+    img: 'https://placehold.co/300x180',
+    id: '5',
+
+  },
+  {
+    productName: 'Sneaker Eleganti',
+    price: '79,00 €',
+    description: 'Sneaker in pelle liscia con suola bianca, design minimal per look casual ed eleganti.',
+    img: 'https://placehold.co/300x180',
+    id: '6',
 
   }
 ]
 
-PRODUCTS.forEach((product) => {
+function renderProducts(list){
+  cardContainer.innerHTML='';
+
+list.forEach((item) => {
   const newArticle = document.createElement('article');
   newArticle.classList.add('col-12', 'col-sm-6', 'col-xl-4', 'mb-3');
   const newDiv = document.createElement('div');
   newDiv.classList.add('card', 'h-100');
   const newImg = document.createElement('img');
   const attributes = {
-    src: 'https://savefumisteria.it/wp-content/uploads/2023/09/placeholder-661-1.png',
-    alt: `${product.productName}`,
+    src: `${item.img}`,
+    alt: `${item.productName}`,
   }
 
   for (const attribute in attributes) {
@@ -50,16 +80,17 @@ PRODUCTS.forEach((product) => {
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
   const productName = document.createElement('h5');
-  productName.textContent = product.productName;
+  productName.textContent = item.productName;
   productName.classList.add('card-title');
   const productDesc = document.createElement('p');
-  productDesc.classList.add('card-text');
-  productDesc.textContent = product.description;
+  productDesc.classList.add('card-text',);
+  productDesc.textContent = item.description;
   const price = document.createElement('strong');
-  price.textContent = product.price;
+  price.textContent = item.price;
+  price.classList.add('text-primary')
   const newBtn = document.createElement('button');
   newBtn.textContent = 'Dettagli';
-  newBtn.classList.add('btn', 'btn-primary', 'w-100', 'mt-2');
+  newBtn.classList.add('btn', 'w-100', 'mt-2', 'btn-outline-primary', 'text-primary');
   const btnAttr = {
     'data-bs-target': '#modal',
     'data-bs-toggle': 'modal',
@@ -81,22 +112,26 @@ PRODUCTS.forEach((product) => {
   newArticle.appendChild(newDiv);
   cardContainer.appendChild(newArticle);
 
-  
+
   newBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    staticBackdropLabel.textContent = product.productName;
-    productPrice.textContent = product.price;
-    productDescriptionPar.textContent = product.description;
+    staticBackdropLabel.textContent = item.productName;
+    productPrice.textContent = item.price;
+    productDescriptionPar.textContent = item.description;
 
   })
 
 
 })
+}
+
+renderProducts(PRODUCTS);
 
 // funzione per cambio tema//
 
-themeBtn.addEventListener('click',(e) => {
+themeBtn.addEventListener('click', (e) => {
   e.preventDefault();
   body.classList.toggle('dark');
   themeBtn.textContent = document.body.classList.contains('dark') ? 'Tema Chiaro' : 'Tema Scuro';
 })
+

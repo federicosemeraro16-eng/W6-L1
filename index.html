@@ -87,8 +87,17 @@
   <!-- main sezione prodotti ed aside -->
 
   <main class="pt-4">
+    <!-- container per bottoni di filtraggio -->
+    <div id="fltri" class="mb-4">
+      <button type="button" class="btn btn-outline-primary ms-2  mb-2 active" data-category="all">Tutti</button>
+      <button type="button" class="btn btn-outline-primary ms-2  mb-2" data-category="shoes">Scarpe</button>
+<button type="button" class="btn btn-outline-primary ms-2  mb-2" data-category="clothing">Abbigliamento</button>
+<button type="button" class="btn btn-outline-primary ms-2  mb-2" data-category="accessories">Accessori</button>
+
+
+    </div>
     <div class="container-lg" id="prodotti">
-      <div class="row">
+      <div id='products-container'class="row">
         <!-- aside a scomparsa -->
         <aside class="col-lg-3 d-none d-lg-block">
           <div class="bg-light p-3 rounded border">

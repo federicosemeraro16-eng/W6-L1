@@ -1,3 +1,28 @@
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: hsl(150, 60%, 30%) !important;
+  border-color: hsl(150, 60%, 30%) !important;
+}
+
+.btn-primary:hover {
+  background-color: hsl(150, 60%, 20%) !important;
+}
+
+.btn-outline-primary {
+  border-color: hsl(150, 60%, 30%);
+  color: hsl(150, 60%, 30%);
+}
+.btn-outline-primary:hover, .btn-outline-primary.active {
+  border-color: hsl(150, 60%, 30%) !important;
+  color: #ffffff !important;
+  background-color: hsl(150, 60%, 30%);
+}
+
+.text-primary {
+  color: hsl(150, 60%, 30%) !important;
+}
+
 body {
   background-color: #fafafa;
   color: #1a1a1a;
@@ -48,21 +73,20 @@ body.dark .modal-content {
   color: #e0e0e0;
 }
 body.dark header {
-  background-color: rgb(85%, 85%, 85%) !important;
+  background-color: hsl(150, 60%, 15%) !important;
 }
-body.dark .card-body h5 {
-  color: #fff;
-}
+body.dark .card-body h5,
 body.dark .card-body strong {
-  color: #fff;
+  color: hsl(150, 60%, 30%);
 }
 body .card {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 200ms ease, transform 200ms ease;
 }
 body .card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: translate(-3px);
+  transform: translateY(-3px);
 }
 @media screen and (min-width: 768px) {
   body .card {
@@ -71,7 +95,36 @@ body .card:hover {
 }
 body .card .card-title {
   font-weight: bold;
-  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.card.scarpe {
+  border-top: 4px solid hsl(220, 60%, 40%);
+}
+.card.scarpe .card-title {
+  color: hsl(220, 60%, 40%);
+}
+.card.scarpe:hover {
+  box-shadow: 0 6px 18px rgba(16%, 32%, 64%, 0.3);
+}
+
+.card.abbigliamento {
+  border-top: 4px solid hsl(0, 70%, 50%);
+}
+.card.abbigliamento .card-title {
+  color: hsl(0, 70%, 50%);
+}
+.card.abbigliamento:hover {
+  box-shadow: 0 6px 18px rgba(85%, 15%, 15%, 0.3);
+}
+
+.card.accessori {
+  border-top: 4px solid hsl(45, 90%, 50%);
+}
+.card.accessori .card-title {
+  color: hsl(45, 90%, 50%);
+}
+.card.accessori:hover {
+  box-shadow: 0 6px 18px rgba(95%, 72.5%, 5%, 0.3);
 }
 
 .hero-height {

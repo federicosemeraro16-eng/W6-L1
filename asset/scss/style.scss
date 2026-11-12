@@ -1,94 +1,154 @@
 @use 'variables' as v;
 
-@mixin tema($bg,$testo,$card-bg,$bordo,$muted){
+@mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
   background-color: $bg;
   color: $testo;
-  .card{
+
+  .card {
     background-color: $card-bg;
     border-color: $bordo;
-    .card-text{
+
+    .card-text {
       color: $muted;
     }
-    .card-footer{
+
+    .card-footer {
       background-color: $card-bg;
     }
   }
-  aside .bg-light{
+
+  aside .bg-light {
     background-color: $card-bg !important;
     border-color: $bordo;
     color: $testo;
   }
-  .modal-content{
+
+  .modal-content {
     background-color: $card-bg;
     color: $testo;
   }
 
-  
+
 }
 
-// mixin media query
+// override classi bs
 
-@mixin tablet-Query{
-  @media screen and (min-width:768px) {
-    @content
-    
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: v.$brand-primary !important;
+  border-color: v.$brand-primary !important;
+}
+
+.btn-primary:hover {
+  background-color: darken(v.$brand-primary, 10%) !important;
+}
+
+
+.btn-outline-primary {
+  border-color: v.$brand-primary;
+  color: v.$brand-primary;
+  &:hover,
+  &.active{
+    border-color: v.$brand-primary !important;
+    color: #ffffff !important;
+    background-color: v.$brand-primary;
+  }
+
+}
+
+
+.text-primary {
+  color: v.$brand-primary !important;
+}
+
+
+// mixin
+
+@mixin card-prodotto($accent){
+  border-top: 4px solid $accent;
+  .card-title{
+    color: $accent;
+  }
+  &:hover{
+    box-shadow: 0 6px 18px rgba($accent,0.3);
   }
 }
 
-body{
-  @include tema(#fafafa,#1a1a1a,#ffffff,#e0e0e0,#6c757d);
-  transition: background-color 200ms ease,color 200ms ease;
+@mixin tablet-Query {
+  @media screen and (min-width:768px) {
+    @content
+  }
+}
+
+body {
+  @include tema(#fafafa, #1a1a1a, #ffffff, #e0e0e0, #6c757d);
+  transition: background-color 200ms ease, color 200ms ease;
 
 
-  &.dark{
-      @include tema(#121212,#e0e0e0,#1e1e1e,#333333,#a0a0a0);
-      
-       header {
-         background-color: v.$brand-primary-dark !important;
-      }
-      .card-body h5,
-      .card-body strong{
-        color: v.$brand-primary;
-      }
-    
+  &.dark {
+    @include tema(#121212, #e0e0e0, #1e1e1e, #333333, #a0a0a0);
+
+    header {
+      background-color: v.$brand-primary-dark !important;
     }
 
-  .card{
+    .card-body h5,
+    .card-body strong {
+      color: v.$brand-primary;
+    }
+
+  }
+
+  .card {
     border-radius: v.$radius-base;
     box-shadow: v.$shadow-card;
-    transition: box-shadow 200ms ease,transform 200ms ease;
-  
-    &:hover{
+    transition: box-shadow 200ms ease, transform 200ms ease;
+
+    &:hover {
       box-shadow: v.$shadow-card-hover;
-      transform: translateY(-3px) ;
+      transform: translateY(-3px);
     }
-     @include tablet-Query{
+
+    @include tablet-Query {
       padding: 24px;
     }
 
 
-    
-    .card-title{
+
+    .card-title {
       font-weight: bold;
-      
+
     }
   }
-  
+
 }
 
+
+.card.scarpe{
+  @include card-prodotto(hsl(220,60%,40%));
+}
+
+.card.abbigliamento{
+  @include card-prodotto(hsl(0,70%,50%));
+}
+
+.card.accessori{
+  @include card-prodotto(hsl(45,90%,50%));
+}
 
 
 //codice importato da css precedente e reinserito con scss//
-.hero-height{
+.hero-height {
   height: 30vh;
 }
 
-.hero-par-height{
+.hero-par-height {
   height: 100px;
 }
 
 
-.img-modal-size{
+.img-modal-size {
   width: 600px;
   height: 300px;
 }
