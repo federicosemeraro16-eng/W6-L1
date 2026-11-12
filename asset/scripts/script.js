@@ -95,7 +95,7 @@ function renderProducts(list) {
     newDiv.appendChild(newImg);
 
     const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+    cardBody.classList.add('card-body','d-flex','justify-content-between','flex-column');
     const productName = document.createElement('h5');
     productName.textContent = item.productName;
     productName.classList.add('card-title');
@@ -148,6 +148,7 @@ renderProducts(PRODUCTS);
 
 FILTERS_CONTAINER.addEventListener('click', (e) => {
   e.preventDefault();
+  
   let categoryChoosed = e.target.dataset.category;
   if(!categoryChoosed){
     return
